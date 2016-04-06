@@ -16,7 +16,7 @@ $serversList = Invoke-RestMethod -Method Get -Uri $uri -Headers $header -Content
 #Создать сервер
 $uri = "https://api.1cloud.ru/server"
 $serverSet = '{"Name":"testAPI","CPU":1,"RAM":1024,"HDD":40,"imageID":1,"HDDType":"SSD","IsHighPerformance":true}'
-$res = = Invoke-RestMethod -Method Post -Uri $uri -Headers $header -ContentType 'application/json' -Body $serverSet
+$res = Invoke-RestMethod -Method Post -Uri $uri -Headers $header -ContentType 'application/json' -Body $serverSet
 #В переменной $serverSet находится набор переменных для задания базовых параметорв виртуального сервера
 #В переменной $res возвращаются выходные параметры сервера: ID, Name и т.п.
 #Подробнее о входных и выходных параметрах можно узнать в документации https://1cloud.ru/api/server/createserver
