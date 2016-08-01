@@ -1,6 +1,6 @@
 ﻿#Ключ API (нужно сгененрировать в панели управления https://panel.1cloud.ru/Account/Manage)
 $apiKey='0c2d4d020e5a0b6d7sdfsdfsdf96ae41edasdd4f673asdasdfc4f4150fe5'
-
+$header = @{'Authorization'= "Bearer $apiKey"}
 
 #Получить баланс
 $uri = "https://api.1cloud.ru/customer/balance"
