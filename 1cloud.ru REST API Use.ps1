@@ -25,7 +25,7 @@ $res = Invoke-RestMethod -Method Post -Uri $uri -Headers $header -ContentType 'a
 $id = "123"
 $uri = "https://api.1cloud.ru/server/$id/action"
 $action = '{"Type":"PowerOff"}'
-$res = = Invoke-RestMethod -Method Post -Uri $uri -Headers $header -ContentType 'application/json' -Body $action
+$res = Invoke-RestMethod -Method Post -Uri $uri -Headers $header -ContentType 'application/json' -Body $action
 #В переменной $id задается номер сервера, получить который можно с помощью "Получить список серверов"
 #В переменной $action задается тип действия (в данном примере выключение сервера)
 #В переменной $res возвращается результат действия
@@ -47,6 +47,6 @@ $result = Invoke-RestMethod -Method Post -Uri $uri -Headers $header -ContentType
 #Удалить сеть
 $id = "231"
 $uri = "https://api.1cloud.ru/network/$id"
-Invoke-RestMethod -Method Delete -Uri $uri -Headers $header -ContentType 'application/json'
+$result = Invoke-RestMethod -Method Delete -Uri $uri -Headers $header -ContentType 'application/json'
 #В переменной $id номер сети для удаления, который можно получить с помощью запроса "Получить список сетей"
 #Запрос не возвращает результата, если существует сеть с номером $id, она будет удалена
